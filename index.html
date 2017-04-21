@@ -8,13 +8,75 @@
   <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-	
+<body id="healthTracker">
+	<div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Health Tracker App</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <input id="search-text" type="text" placeholder="Search for food">
+        </div>
+        <div class="col-md-2">
+          <button id="search-btn">Search</button>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <!-- Collection Column -->
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Item Name</th>
+                <th>Brand Name</th>
+                <th>Calories</th>
+                <th>Add</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+        <!-- Result Column -->
+        <div class="col-md-6">
+          <h2>Result</h2>
+          <h3>Added Items:</h3>
+          <ul id="foodList">
+            
+          </ul>
+          <h3>Total Calories:<span>Result</span></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Template -->
+  <!-- Item Template -->
+  <script type="text/templage" id="result-template">
+    <td><%- item_name %></td>
+    <td><%- brand_name %></td>
+    <td><%- calories %></td>
+    <td><button class="btn btn-primary addFood"></button></td>
+  </script>
+
+  <script type="text/template" id="food-template">
+    <li>
+      <%- itemName %> | <%- brandName %> | <%- calories %> | <span class="deleter"></span> 
+    </li>
+  </script>
+  
+
+
+
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
   <script src="js/lib/backbone-min.js"></script>
   <script src="js/lib/backbone.localStorage.min.js"></script>
+
   <script src="js/models/todo.js"></script>
   <script src="js/collections/todos.js"></script>
   <script src="js/views/todos.js"></script>
