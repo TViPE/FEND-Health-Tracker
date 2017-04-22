@@ -37,7 +37,7 @@
                 <th>Add</th>
               </tr>
             </thead>
-            <tbody id="table-body"></tbody>
+            <tbody id="resultList"></tbody>
           </table>
         </div>
         <!-- Result Column -->
@@ -55,11 +55,11 @@
   
   <!-- Template -->
   <!-- Item Template -->
-  <script type="text/templage" id="result-template">
-    <td><%- item_name %></td>
-    <td><%- brand_name %></td>
+  <script type="text/template" id="result-template">
+    <td><%- itemName %></td>
+    <td><%- brandName %></td>
     <td><%- calories %></td>
-    <td><button class="btn btn-primary addFood"></button></td>
+    <td><button class="btn btn-primary addFood">ADD</button></td>
   </script>
 
   <script type="text/template" id="food-template">
@@ -77,10 +77,12 @@
   <script src="js/lib/backbone-min.js"></script>
   <script src="js/lib/backbone.localStorage.min.js"></script>
 
-  <script src="js/models/todo.js"></script>
-  <script src="js/collections/todos.js"></script>
-  <script src="js/views/todos.js"></script>
+  <script src="js/models/food.js"></script>
+  <script src="js/models/result.js"></script>
+  <script src="js/collections/foods.js"></script>
+  <script src="js/collections/results.js"></script>
+  <script src="js/views/food.js"></script>
+  <script src="js/views/result.js"></script>
   <script src="js/views/app.js"></script>
-  <script src="js/routers/router.js"></script>
   <script src="js/app.js"></script>	
 </body>
