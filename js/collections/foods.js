@@ -9,6 +9,12 @@ var FoodCollection = Backbone.Collection.extend({
 	clearAllFoodItems: function(){
 		_.invoke(tasks.toArray(), 'destroy');
 	},
+
+	sumCalories: function(){
+		return this.reduce(function(memo, value) { 
+			return memo + value.get("calories") 
+		}, 0);
+	}
 });
 
 app.FoodCollection = new FoodCollection();
