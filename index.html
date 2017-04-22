@@ -85,4 +85,10 @@
   <script src="js/views/result.js"></script>
   <script src="js/views/app.js"></script>
   <script src="js/app.js"></script>	
+
+  <script>
+    $(window).on("unload", function() {
+      localStorage.clear();
+    });
+  </script>
 </body>
