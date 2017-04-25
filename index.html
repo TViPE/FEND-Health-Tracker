@@ -45,9 +45,19 @@
         <div class="col-md-6">
           <h2>Result</h2>
           <h3>Added Items:</h3>
-          <ul id="foodList">
-            
-          </ul>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Item Name</th>
+                <th>Brand Name</th>
+                <th>Calories</th>
+                <th>Add</th>
+              </tr>
+            </thead>
+            <tbody id="foodList">
+              
+            </tbody>
+          </table>
           <h3>Total Calories: <span id="totalCalories"></span></h3>
         </div>
       </div>
@@ -64,9 +74,10 @@
   </script>
 
   <script type="text/template" id="food-template">
-    <li>
-      <%- itemName %> | <%- brandName %> | <%- calories %> | <span class="deleter"></span> 
-    </li>
+    <td><%- itemName %></td>
+    <td><%- brandName %></td>
+    <td><%- calories %></td>
+    <td><button class="btn btn-danger btn-xs" id="deleteBtn">DELETE</button></td>
   </script>
   
 
