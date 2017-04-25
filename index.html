@@ -88,18 +88,22 @@
   <script src="js/app.js"></script>	
 
   <script>
-    // function closeIt(){
-    //   return "Any string value here forces a dialog box to \n" +
-    //   "appear before closing the window.";
-    // };
-    // window.onbeforeunload = closeIt;
-    $(window).on("unload", function(event) {
-      var type = event.currentTarget.performance.navigation.type;
-      console.log(type);
-       if(type != 1){
-         localStorage.clear();
-      }
-      
+    function closeIt(){
+      return "Do you really want to close it?";
+    };
+    window.onbeforeunload = closeIt;
+    $(window).on('unload', function(){
+      localStorage.clear();
     });
+    
+    
+    /// Old Code to detect the reload event
+
+    // $(window).on("unload", function(event) {
+    //   var type = event.currentTarget.performance.navigation.type;
+    //   console.log(type);
+    //   //  if(type != 1){
+    //   //    localStorage.clear();
+      // }
   </script>
 </body>
