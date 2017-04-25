@@ -96,8 +96,8 @@
     $(window).on("unload", function(event) {
       var type = event.currentTarget.performance.navigation.type;
       console.log(type);
-      if(type != 0){
-        localStorage.clear();
+       if(type != 1){
+         localStorage.clear();
       }
       
     });
